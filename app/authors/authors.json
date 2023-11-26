@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Charlie Brown",
+        "image": "https://www.peanuts.com/sites/default/files/cb-color.jpg",
+        "bio": "Charlie Brown needs free therapy!"
+    },
+    {
+        "name": "Sally Brown",
+        "image": "https://www.peanuts.com/sites/default/files/sa-color.jpg",
+        "bio": "Charlie, we have a problem."
+    },
+    {
+        "name": "Snoopy",
+        "image": "https://cdn.theatlantic.com/thumbor/iRIVzWCrLxABf1kjfzOSnIde070=/801x0:3363x2562/1080x1080/media/img/2015/09/BOB_Boxer_Peanuts_Opener_HP/original.jpg",
+        "bio": "Snoopy is quite the gentleman!" 
+    },
+    {
+        "name": "Lucy van Pelt",
+        "image": "https://s3.amazonaws.com/comicgeeks/characters/avatars/18191.jpg?t=1676946853",
+        "bio": "Someone tell Charlie Brown I'm charging five cents for therapy"
+    }
+]
