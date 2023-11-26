@@ -70,17 +70,21 @@ export default function Home() {
   }
 
   return (
-      <div className="grid gap-4">
-        <h1 className="content-center font-semibold text-4xl">Welcome to the Official Peanuts Blog! 👋</h1>
-        <p>The Peanuts blog is a creative effort that was launched in 2023. Our goal is to share our totally tubular writing with the world through our blog. Enjoy!</p>
-        <h2 className="content-center font-semibold text-2xl">About Our Founders 👩‍💻</h2>
-        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          <Person person={person1}/>
-          <Person person={person2}/>
-          <Person person={person3}/>
-        </ul>
+      <div className="grid gap-6 px-5">
+        <h1 className="text-center font-semibold text-4xl">Welcome to the Official Peanuts Blog! 👋</h1>
+        <p className="text-lg text-center">The Peanuts blog is a creative effort that was launched in 2023. Our goal is to share our totally tubular writing with the world through our blog. Enjoy!</p>
+        <Container>
+          <div className="grid gap-4 py-5 px-5">
+            <h2 className="italic text-center font-semibold text-2xl">About Our Founders 👩‍💻</h2>
+            <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <Person person={person1}/>
+              <Person person={person2}/>
+              <Person person={person3}/>
+            </ul>
+            <iframe width="1200" height="600" src="https://www.youtube.com/embed/MmFfTJlIvhQ?si=hC8xKBl6gdBGbXdc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+        </Container>
       </div>
-
   );
   
 }

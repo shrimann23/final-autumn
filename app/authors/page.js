@@ -2,23 +2,24 @@ import Container from "../components/Container";
 
 export default async function Authors() {
     const authors = await getAuthors();
-    console.log(authors);
+    console.log(JSON.stringify(authors));
     return (
         <Container>
             <p>Get to know our Peanuts Blog authors!</p>
+            <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {authors.map((author) => (
+                    <AuthorCard key={author.name} author={author} />
+                ))}
+            </ul>
         </Container>
     );
 }
 
-/* <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {authors.map((author) => (
-                    <AuthorCard key={author.name} author={author} />
-                ))}
-            </ul> */
+
 
 async function getAuthors() {
 
-    const res = await fetch("https://cdn.sanity.io/files/a798ibwa/production/da39a3ee5e6b4b0d3255bfef95601890afd80709.json");
+    const res = await fetch("authors.json");
     
     if (!res.ok) {
         throw new Error("Failed to fetch authors");

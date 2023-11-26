@@ -2,6 +2,7 @@ import './globals.css'
 import { Montserrat } from 'next/font/google'
 import Navbar from "./components/Navbar";
 import Container from "./components/Container";
+import Footer from "./components/Footer";
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
@@ -14,8 +15,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={montserrat.className}>
-        <Navbar />
-        {children}
+        <div className="grid gap-10">
+          <Navbar />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   )
