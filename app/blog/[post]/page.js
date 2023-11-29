@@ -14,13 +14,15 @@ export default async function Page({ params }) {
       <div className="mx-auto max-w-prose space-y-8 py-8">
         <BlogPostHeader post={post} />
         <hr className="border-primary-200" />
-        <PortableText value={post.content} components={portableTextComponents} />
+        <article className="prose md:prose-md prose-primary mx-auto">
+          <PortableText value={post.content} components={portableTextComponents} />
+        </article>
       </div>
     </Container>
   );
 }
 
-{/* <article className="prose md:prose-md prose-primary mx-auto"> */}
+
 
 const portableTextComponents = {
   types: {
@@ -47,7 +49,7 @@ function ImageComponent({ value }) {
 }
 
 async function getBlogPosts(slug) {
-    const query = `*[_type == "blogPost" && slug.current == $slug] {
+    const query = `*[_type == "blogPost" && slug.current == $slug][0] {
       title,
       description,
       date,
