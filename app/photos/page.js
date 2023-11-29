@@ -5,12 +5,14 @@ export default async function Photos() {
 
     return (
         <Container>
-            <p>Our authors have dogs! Here are their photos.</p>
+          <div className="grid gap-4">
+            <p className="text-lg font-semibold">Our authors have DOGS! Here are their photos.</p>
             <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {dogs.map((dog) => (
                     <DogCard key={dog.name} dog={dog} />
                 ))}
             </ul>
+          </div>
         </Container>
     );
 }
