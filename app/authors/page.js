@@ -42,10 +42,11 @@ export default async function Authors() {
 function AuthorCard({ author }) {
     return (
         <li className="border md:hover:scale-95 transition-transform border-primary-200 bg-gradient-to-bl from-secondary-100 to-white via-white rounded-xl p-4 flex items-start justify-start space-x-4">
+            
             <img
-            src={author.image}
-            alt={author.name}
-            className="w-40 h-40 rounded-lg border object-cover border-primary-200"
+                src={author.image}
+                alt={author.name}
+                className="w-40 h-40 rounded-lg border object-cover border-primary-200"
             />
             <div className="space-y-1">
             <h4 className="font-medium">{author.name}</h4>
@@ -55,6 +56,8 @@ function AuthorCard({ author }) {
             </div>
         </li>
     );
+
+    
 }
 
 

@@ -4,6 +4,7 @@ import { tryGetImageDimensions } from "@sanity/asset-utils";
 import BlogPostHeader from "./components/BlogPostHeader";
 import { PortableText } from "@portabletext/react";
 import Container from "../../components/Container";
+import Image from "next/image";
 
 export default async function Page({ params }) {
   const post = await getBlogPosts(params.post);
@@ -33,6 +34,7 @@ function ImageComponent({ value }) {
   return (
     <Image
       src={urlForImage(value).fit("max").auto("format").url()}
+      alt="Hello!"
       width={width}
       height={height}
       loading="lazy"
