@@ -18,7 +18,7 @@ export default function BlogPostCard({ post }) {
         className="rounded-2xl border border-primary-400"
       />
       <div className="space-y-2">
-        <DatePill date={post.date} />
+        <DatePill date={post.date}/>
         <div>
           <h2 className="text-lg font-semibold">{post.title}</h2>
           <p className="line-clamp-1 text-sm text-primary-600">
