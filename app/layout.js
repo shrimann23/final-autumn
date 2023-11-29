@@ -3,7 +3,8 @@ import { Montserrat } from 'next/font/google'
 import Navbar from "./components/Navbar";
 import Container from "./components/Container";
 import Footer from "./components/Footer";
-
+import { Analytics } from '@vercel/analytics/react';
+ 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
 export const metadata = {
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
         <div className="grid gap-10">
           <Navbar />
           {children}
+          <Analytics />
           <Footer />
         </div>
       </body>
