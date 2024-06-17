@@ -1,3 +1,6 @@
+Here is a React.js blog website I developed as part of the Web Impact Autumn 2024 Cohort!
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
